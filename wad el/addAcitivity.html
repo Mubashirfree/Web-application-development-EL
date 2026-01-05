@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Wad el — Simple Page</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+      <link rel="stylesheet" href="style.css" > 
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header>
+    <nav class="nav-bar navbar-dark bg-dark text-light  text-center p-3 nav-fixed">
+        <ul class="d-flex align-items-center justify-content-between list-unstyled m-0 w-100">
+            <li class="nav-item list-inline-item"><img class="img-fluid logo" src="resources/logo.png" alt="college logo">R V college of enginerring</li>
+            <li class="nav-item list-inline-item">Faculty Activity Management</li>
+            <li class="nav-item list-inline-item"> <button class="btn btn-outline-primary">logout</button></li>
+
+        </ul>
+    </nav>
+</header>
+<div class="d-flex flex-grow-1 ">
+<div class="sidebar position-fixed p-3 col-3">
+    <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-transparent text-white">
+            Dashboard
+        </a>
+        <a href="/addAcitivity.html" class="list-group-item list-group-item-action bg-transparent text-white">
+            Add Activity
+        </a>
+        <a href="/view.html" class="list-group-item list-group-item-action bg-transparent text-white">
+            View Records
+        </a>
+        <a href="#" class="list-group-item list-group-item-action bg-transparent text-white">
+            Profile
+        </a>
+    </div>
+</div>
+    <main class=" main flex-grow-1 ">
+     <div class="container">
+       <div class="row">
+          <div class="card col-md-3 m-2 p-3">
+            <div class="title border-bottom d-inline-block pb-2">
+             <h5>Total workshops Attended</h5>
+            </div>
+            <div class="content text-center pt-2">
+             <h4>05</h4>
+            </div>
+           
+          </div>
+
+            <div class="card col-md-3 m-2 p-3">
+            <div class="title border-bottom d-inline-block pb-2">
+             <h5>Total Seminar Attended</h5>
+            </div>
+            <div class="content text-center pt-2">
+                <h4>08</h4>
+          </div>
+          </div>
+            <div class="card col-md-3 m-2 p-3">
+                <div class="title border-bottom d-inline-block pb-2">
+                    <h5>Total Conferences Attended</h5>
+                </div>
+                <div class="content text-center pt-2">
+                    <h4>03</h4>
+                </div>
+            </div>
+        </div>
+
+     </div>
+     <div class="container">
+        <form action="" id="myform" enctype="multipart/form-data" class=" mt-3 p-4 " style="max-width:600px;">
+
+            <legend class="fw-bold mb-3">Add new Acitivity</legend>
+
+            <!--Acitivity Type Dropdown -->
+            <div class="mb-3">
+            <label for="ActivityType">Activity Type:</label>
+            <select class="form-select" id="ActivityType" name="AcitivityType">
+                <option value="workshops">Workshops</option>
+                <option value="seminars">Seminars</option>
+                <option value="conferences">Conferences</option>
+            </select>
+            </div>
+
+            <!--Activity Title -->
+            <div class="mb-3">
+            <label for="ActivityTitle">Activity Title:</label>
+            <input type="text" class="form-control mb-3" id="ActivityTitle" name="ActivityTitle" required>
+            </div>
+
+            <!--Organized by -->
+            <div class="mb-3">
+            <label for="organized">Oraganized by:</label>
+            <input type="text" class="form-control mb-3" id="organized" name="organized" required>
+            </div>
+            <!--Mode (Online/Offline) -->
+            <div class="mb-3">
+            <label  class="form-label d-block">Mode:</label>
+            <div class="form-check form check-inline">
+                <input type="radio" class="form-check-input" id="online" name="mode" value="online">
+                <label for="online" class="form-check-label">Online</label>
+            </div>
+            <div class="form-check form check-inline">
+            <input type="radio" class="form-check-input" id="offline" name="mode" value="offline">
+            <label for="offline" class="form-check-label">Offline</label>
+            </div>
+            </div>
+            
+            
+            
+            <div class="mb-3">
+            <label for="date" class="form-label">Date:</label>
+            <input type="date" class="form-control mb-3" id="date" name="date" required>
+            </div>
+            <div class="mb-3">
+            <label for="upload" class="form-label">Upload Certificate:</label>
+            <input type="file" class="form-control mb-3" id="upload" name="upload[]" multiple>            
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+     </div>
+    </main>
+    </div>
+    <footer class="footer  mt-auto py-03 p-4">
+    <div class="container text-center">
+        <span class="footer-text">&copy; 2026 R V College of Engineering|Faculty Activity Management</span>
+    </div>
+    </footer>
+
+</body>
+</html>
