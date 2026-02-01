@@ -1,0 +1,165 @@
+:root {
+    --rv-navy: #1a237e;
+    --rv-accent: #3949ab;
+    --sidebar-width: 280px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: var(--sidebar-width);
+    background: var(--rv-navy);
+    height: 100vh;
+    color: white;
+    z-index: 1000;
+}
+
+.sidebar-header {
+    padding: 2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sidebar-logo { height: 45px; }
+
+.menu-item {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    margin: 4px 15px;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.menu-item:hover, .menu-item.active {
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.menu-item i { margin-right: 12px; }
+
+.sidebar-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.logout-btn {
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+}
+
+/* Content Area */
+.content-wrapper {
+    margin-left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
+}
+
+.top-nav { background: rgba(255,255,255,0.8); backdrop-filter: blur(8px); }
+
+.welcome-banner {
+    background: linear-gradient(135deg, var(--rv-navy) 0%, var(--rv-accent) 100%);
+    padding: 3rem;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(26,35,126,0.2);
+}
+
+/* Activity Cards */
+.activity-card {
+    background: white;
+    border-radius: 20px;
+    transition: var(--transition);
+    border: none;
+    overflow: hidden;
+}
+
+.activity-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 1.25rem;
+}
+
+.content-footer { margin-left: var(--sidebar-width); }
+
+/* Custom Pills for Tabs */
+.custom-pills .nav-link {
+    color: var(--rv-navy);
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.custom-pills .nav-link.active {
+    background-color: var(--rv-navy) !important;
+    color: white !important;
+    box-shadow: 0 4px 10px rgba(26, 35, 126, 0.2);
+}
+
+/* Form Controls focus effect */
+.form-control:focus, .form-select:focus {
+    border-color: var(--rv-navy);
+    box-shadow: 0 0 0 0.25rem rgba(26, 35, 126, 0.1);
+}
+
+/* Sidebar and Content Margin (Ensure consistency) */
+.content-wrapper {
+    margin-left: 280px;
+    width: calc(100% - 280px);
+}
+
+/* Custom Faculty List Scrollboxes */
+.faculty-list-custom {
+    height: 150px !important;
+    border: 1px solid #dee2e6;
+    border-radius: 12px !important;
+    padding: 10px !important;
+    font-size: 0.95rem;
+}
+
+.faculty-list-custom option {
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 2px;
+}
+
+.faculty-list-custom option:checked {
+    background-color: var(--rv-navy) !important;
+    color: white !important;
+}
+
+/* Form Styling Improvements */
+.form-control, .form-select {
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+.form-control:focus {
+    border-color: var(--rv-navy);
+    box-shadow: 0 0 0 0.25rem rgba(26, 35, 126, 0.1);
+}
+
+/* Responsive sidebar fix */
+@media (max-width: 992px) {
+    .content-wrapper, footer {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+}

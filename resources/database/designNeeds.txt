@@ -1,0 +1,59 @@
+gemini ai->https://gemini.google.com/share/b0582158cb3f
+->project Grants Received 
+project name
+pi and co pi
+funding agency 
+sanctioned Amount
+Sanction year
+Amount Recieved 
+Remarks(1/2nd/3rd year)
+>project Consultancy Proposals
+SI no
+project name
+PI and Co PI
+proposal submitted to
+budget Amount
+Proposal Status
+document
+>Training Consultancy Activitie
+si no
+Training/Consultancy work
+Faculty involved 
+Funding Agency
+Amount Recd.
+
+
+>Expert Lectures organized by the Dept
+si no
+Topic 
+Name of Resoucre Person
+Organization Name and Address
+Date 
+participants-
+1.No of Students
+2.no of Faculty
+3.Industry
+Coordinators
+
+>Workshops /Seminars/Confernces/Event Organized
+si no
+Detail of workshop/seminar/conference /events
+date of the event
+particaption
+1.no of students
+2.no of Faculty
+3.industory  
+organized by
+coordinator
+proof
+
+
+->Workshop/Seminar/Conference attended by Faculty
+1.SI.NO
+2.Faculty Name
+3.Title
+4.Venue
+5.Date attended
+6.Proof(cerificate link)
+
+

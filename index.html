@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Faculty Dashboard | RVCE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <div class="d-flex flex-grow-1">
+        
+        <nav class="sidebar position-fixed d-none d-lg-block">
+            <div class="sidebar-header">
+                <img src="resources/logo.png" alt="Logo" class="sidebar-logo">
+                <div class="sidebar-brand">
+                    <span class="d-block fw-bold">RVCE</span>
+                    <span class="small opacity-75">MCA Department</span>
+                </div>
+            </div>
+
+            <div class="sidebar-menu mt-4">
+                <a href="index.html" class="menu-item active">
+                    <i class="bi bi-house-door-fill"></i> Dashboard
+                </a>
+                <a href="/addAcitivity.html" class="menu-item">
+                    <i class="bi bi-plus-square-fill"></i> Add Activity
+                </a>
+                <a href="/view.html" class="menu-item">
+                    <i class="bi bi-collection-fill"></i> View Records
+                </a>
+                <!--
+                <a href="#" class="menu-item">
+                    <i class="bi bi-person-circle"></i> Profile
+                </a>-->
+            </div>
+
+            <div class="sidebar-footer">
+               <!-- 
+                <button class="btn logout-btn w-100">
+                    
+                    <i class="bi bi-box-arrow-left me-2"></i> Logout
+                </button>-->
+
+            </div>
+        </nav>
+
+        <div class="content-wrapper">
+            <header class="top-nav d-flex justify-content-between align-items-center px-4 py-3">
+                <div class="search-bar d-none d-md-flex align-items-center px-3">
+                    <i class="bi bi-search text-muted me-2"></i>
+                    <input type="text" placeholder="Search activities..." class="border-0 bg-transparent shadow-none">
+                </div>
+                <div class="user-profile d-flex align-items-center gap-3">
+                    <div class="text-end">
+                        <span class="d-block fw-bold small">Faculty User</span>
+                        <span class="badge bg-success-subtle text-success small">Online</span>
+                    </div>
+                    <img src="https://ui-avatars.com/api/?name=Faculty+User&background=1a237e&color=fff" class="rounded-circle" width="40">
+                </div>
+            </header>
+
+            <main class="container-fluid p-4">
+                <section class="welcome-banner mb-4 text-white">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <h1 class="display-6 fw-bold mb-2">Welcome to Activity Management</h1>
+                            <p class="lead mb-4 opacity-75">Streamlining department events, research grants, and project proposals in one unified dashboard.</p>
+                            <div class="d-flex gap-2">
+                                <a href="/addAcitivity.html" class="btn btn-light px-4 py-2 fw-bold rounded-3">
+                                    <i class="bi bi-plus-lg me-2"></i>New Activity
+                                </a>
+                                <a href="/view.html" class="btn btn-outline-light px-4 py-2 rounded-3">
+                                    <i class="bi bi-list-task me-2"></i>Browse All
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-md-4">
+                        <div class="stat-card p-4 rounded-4 shadow-sm border-0 bg-white">
+                            <div class="d-flex align-items-center">
+                                <div class="stat-icon bg-primary-subtle text-primary me-3">
+                                    <i class="bi bi-lightning-charge-fill"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-muted mb-1 small fw-bold">TOTAL ENTRIES</h6>
+                                    <h3 class="fw-bold mb-0" id="totalCount">0</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h5 class="fw-bold m-0">Recent Activity Stream</h5>
+                    <div class="filter-controls d-flex gap-2">
+                        <select class="form-select form-select-sm rounded-pill px-3">
+                            <option>Newest First</option>
+                            <option>Oldest First</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row g-4" id="activityGrid">
+                    </div>
+            </main>
+        </div>
+    </div>
+
+    <footer class="py-3 text-center border-top bg-white content-footer">
+        <p class="m-0 text-muted small">&copy; 2026 <strong>R V College of Engineering</strong> | Faculty Activity Portal</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/index.js"></script>
+</body>
+</html>
